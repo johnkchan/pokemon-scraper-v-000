@@ -12,13 +12,13 @@ class Pokemon
     db.execute("INSERT INTO pokemon (name, type) VALUES (?, ?)", name, type)
   end
   
- def self.find(id, database)
+ def self.find(id, db)
     new_pokemon = database.execute("SELECT * FROM pokemon WHERE id = (?)", id)
     new_pokemon = new_pokemon[0]
-    Pokemon.new(id: new_pokemon[0], name: new_pokemon[1], type: new_pokemon[2], db: database)
+    Pokemon.new(id: new_pokemon[0], name: new_pokemon[1], type: new_pokemon[2], db: db)
   end
   
-  def alter_hp(hp)
+  def alter_hp(hp, db)
     
     
   end

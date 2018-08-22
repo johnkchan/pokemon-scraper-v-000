@@ -1,5 +1,5 @@
 class Scraper
-  attr_accessor :file, :parsed_file, :all_pokemon, :db
+  attr_accessor :file, :parsed_file, :all_pokemon, :db, :hp
 
   def initialize(db)
     self.db = db
